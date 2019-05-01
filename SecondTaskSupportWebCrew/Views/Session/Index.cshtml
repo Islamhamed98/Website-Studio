@@ -1,0 +1,127 @@
+﻿@model IEnumerable<SecondTaskSupportWebCrew.Models.Session>
+
+@{
+    ViewBag.Title = "Products";
+}
+ <!-- Start Header Of Session Page Seciton -->
+<div class="prodcut-header">
+    <div class="container">
+        <div class="product-content">
+            <h3>LOREM IPSUM DOLOR SIT AMET</h3>
+            <hr />
+            <p>Dolor sit amet nullam pede semper est, vitae luctus metus libero eu augue. Morbi purus sed libero, faucibus adipiscing, commodo.</p> 
+            <button>Get Started</button>
+        </div>
+    </div>
+</div>
+<!-- End Header Of Session Page Seciton -->
+<div class="header-pro">
+    <h2>20+ Stunning Homepage Layouts</h2>
+    <p>Find what you need in one of our fully equipped demos. Easy to import and highly customizable, they make your life easier.</p>
+</div>
+<div class="test"> 
+<!-- Start Section Of The Sessions in Session Page  -->
+    <div class="sessions-section">
+         <!-- Session Section  -->
+        @foreach (var item in Model)
+        {
+        <div class="session-content make-hover wow fadeInRight" data-wow-duration="2s">
+            <img src="../../images/@item.Image" alt="Session" />
+            <div class="item-cnt"><span>@item.Photgrapher</span></div>
+            <div class="overlay make-hover">
+                <button class="btn">book Session</button>
+                <button class="btn">view Session</button>
+            </div>
+        </div>
+        }
+    </div>
+
+</div>
+<!-- Start Section Of The Sessions in Session Page  -->
+<!--=============================================================================================================================-->
+    
+
+     <!-- Swiper -->
+    <div class="swiper-container" style="margin:60px 0;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(../images/Photographer.jpg);color:#fff; ">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a> 
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../images/photographer-1867417_640.jpg); ">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a>
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../images/Photographer.jpg); ">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a>
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../images/adult-beautiful-bush-1264210.jpg)">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a>
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../images/adult-beautiful-bush-1264210.jpg)">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a>
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../images/photographer-1867417_640.jpg); ">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a>
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../images/adult-beautiful-bush-1264210.jpg)">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a>
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../images/photographer-1867417_640.jpg)">
+                <a href="#" style="background-color: #3498db; "><i class="fa fa-twitter"></i></a>
+                <a href="#" style="background-color: #2b5b84;"><i class="fa fa-facebook"></i></a>
+                <a href="#" style="background-color: #c0392b;"><i class="fa fa-linkedin"></i></a>
+                <p> Charles' Dekens </p>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+<!--=============================================================================================================================-->
+
+<!-- Start About Contact Section -->
+<div class="about-contact">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="about-contact-content">
+                <h2>GET IN TOUCH</h2>
+                <p>IPSUM DOLOR TEMPUS COMMODO ADIPISCING</p>
+                <form class="form-group">
+                    <div class="form-group input-name">
+                        <input type="text" name="Name" placeholder="Name" class="form-control" />
+                    </div>
+                    <div class="form-group input-email">
+                        <input type="Email" name="Email" placeholder="Email" class="form-control" />
+                    </div>
+                    <div class="form-group text-form">
+                        <textarea name="message" placeholder="Message" rows="7" class="form-control"></textarea>
+                    </div>
+                </form>
+                <button class="btn first-btn">SUBMIT</button>
+                <button class="btn second-btn">RESET</button>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- End About Contact Section -->

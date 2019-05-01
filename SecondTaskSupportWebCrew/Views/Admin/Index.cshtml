@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SecondTaskSupportWebCrew.Models.Session>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="test" style="margin-top:90px;">
+    <div class="container">
+        <div class="test-content">
+            <table class="table table-condensed table-dark index-table ">
+                <thead class="index-head">
+                    <tr class="index-tr" style="color:#FFF">
+                        <th scope="col">Id</th>
+                        <th scope="col">Photographer</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>City</th>
+                        <th>Edit/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class=" ">
+                            <th>@item.Id</th>
+                            <th>@item.Photgrapher</th>
+                            <th>@item.Location</th>
+                            <th>@item.Price</th>
+                            <th>@item.Description</th>
+                            <th>@item.Image</th>
+                            <th>@item.City</th>
+
+                            <th style="width:200px" class="btns">
+                                <a href="~/Admin/Edit/@item.Id" class="btn btn-success">Edit</a>
+                                <a href="~/Admin/Delete/@item.Id" class="btn btn-danger">Delete</a>
+                            </th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <a href="~/Admin/Add" class="btn btn-primary" style="margin-left:2px;">Add Session</a>
+        </div>
+
+
+    </div>
+</div>

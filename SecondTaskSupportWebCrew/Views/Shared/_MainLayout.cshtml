@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+  
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/swiper.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    @Html.Partial("_Navbar")
+    <div class="body-content" style="position:relative;">
+        @RenderBody()
+        <hr />
+         <!-- Start Footer -->
+        <div class="clearfix"></div>
+        <div class="footer">
+            <div class="container">
+                <p>Copy Rights  &copy; Reserved By Eslam Hamed </p>
+                <div class="icons">
+                    <i class="fa fa-facebook fa-2x"></i>
+                    <i class="fa fa-twitter fa-2x" style="padding-left:12px"></i>
+                    <i class="fa fa-linkedin fa-2x" style="padding-left:15px"></i>
+                    <span>12/16/2018</span>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer --> 
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/swiper.min.js"></script>
+
+    <script src="~/Scripts/wow.min.js"></script>
+    <script src="~/Scripts/Site.js"></script>
+</body>
+</html>

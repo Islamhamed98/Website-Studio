@@ -1,0 +1,30 @@
+﻿@model SecondTaskSupportWebCrew.Models.Customer
+@{
+    ViewBag.Title = "Login";
+}
+<div class="container">
+    <h2> Login Customer </h2>
+    <hr />
+    @using (Html.BeginForm("Create", "SecondAccount"))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = "Your Email@mail.ru" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = "Your Password" })
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="Save" value="Log In" />
+        </div>
+
+    }
+</div>

@@ -1,0 +1,46 @@
+﻿
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="~/Home/Index">Start Studio</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle cool-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" > @Session["username"] </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="~/SecondAccount/EditProfile/@Session["Id"]">Edit Profile</a></li>
+                        <li><a href="~/SecondAccount/Setting">Setting</a></li>
+                        <li><a href="~/SecondAccount/Logout">Log Out</a></li>
+                    </ul>
+                </li>
+                <li><a href="~/Home/About">Get Started</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li style="color: #f39c12;"><a href="~/Home/Index" class="cool-link">Home</a></li>
+                <li><a href="~/Services/Index" class="cool-link">Services</a></li>
+                <li><a href="~/Home/About" class="cool-link">About Us</a></li>
+                <li><a href="~/Home/Contact" class="cool-link">Contact Us</a></li>
+                <li><a href="~/Session/Index" class="cool-link">Our Sessions</a></li>
+                
+                @if (Session["username"] != null && Session["username"].ToString() == "admin" )
+                {
+                    <li><a href="~/Admin/Index" class="cool-link">Admin</a></li>
+                } else {
+                    
+                    <li><a href="~/Customer/Index" class="cool-link">Profile</a></li>
+                } 
+
+                
+           </ul>
+          </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

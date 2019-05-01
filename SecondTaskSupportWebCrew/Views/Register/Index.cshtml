@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="cont-reg">
+
+@using (Html.BeginForm("Index", "Register", FormMethod.Post))
+{
+
+    <div class="Register-layout">
+        <div class="login-content container  text-center">
+            <div class="row">
+                <div class="col-md-4 register-cnt">
+                    <h3 class="text-center"> Registeration </h3>
+                    <form action="/" method="post">
+                        <div class="form-group">
+                            <div class="col-lg-12 single">
+                                <!-- <span><i class="fa fa-users"></i></span>-->
+                                <input class="form-control item-inp" type="text" name="username" placeholder="Your Username" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-12 single">
+                                <!-- <span><i class="fa fa-users"></i></span>-->
+                                <input class="form-control item-inp" type="password" name="password" placeholder="Your Password" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-12 single">
+                                <!-- <span><i class="fa fa-users"></i></span>-->
+                                <input class="form-control item-inp" type="email" name="email" placeholder="Your Email" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-12 single item-inp">
+                                <!-- <span><i class="fa fa-users"></i></span>--> 
+                                <select class="form-control item-inp" name="gender">
+                                    <option selected disabled>Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <input class="form-control item-inp btn btn-danger" type="submit" name="register" value="Register" onclick="" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+    
+</div>
+
+
+
